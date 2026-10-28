@@ -8,6 +8,7 @@
   var errEl = document.getElementById("err");
   var dl = document.getElementById("dl");
   var pasteBtn = document.getElementById("paste");
+  var clearBtn = document.getElementById("clear");
   var ctx = canvas.getContext("2d");
 
   function setError(msg) {
@@ -22,6 +23,7 @@
 
   function draw(text) {
     var trimmed = text.trim();
+    clearBtn.disabled = !text.length;
     if (!trimmed) {
       setError("");
       box.hidden = true;
@@ -64,6 +66,12 @@
 
   input.addEventListener("input", function () {
     draw(input.value);
+  });
+
+  clearBtn.addEventListener("click", function () {
+    input.value = "";
+    draw("");
+    input.focus();
   });
 
   pasteBtn.addEventListener("click", function () {

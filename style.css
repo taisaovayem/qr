@@ -112,6 +112,19 @@ textarea:focus {
   background: #f4f4f5;
 }
 
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+  background: inherit;
+}
+
+.btn-secondary:disabled:hover {
+  background: #fff;
+}
+
 .btn:focus-visible {
   outline: 2px solid #2563eb;
   outline-offset: 2px;
@@ -158,5 +171,9 @@ textarea:focus {
 
   .btn-secondary:hover {
     background: #3f3f46;
+  }
+
+  .btn-secondary:disabled:hover {
+    background: #27272a;
   }
 }
