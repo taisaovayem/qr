@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tạo mã QR</title>
+  <meta name="description" content="Tạo mã QR ngay trên trình duyệt — không server, không lưu dữ liệu.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+  <main class="wrap">
+    <h1>Tạo mã QR</h1>
+    <textarea id="text" rows="4" placeholder="URL, văn bản, số điện thoại…" autofocus></textarea>
+    <div class="input-actions">
+      <button type="button" id="paste" class="btn btn-secondary">Dán từ clipboard</button>
+    </div>
+
+    <p id="err" class="err" hidden></p>
+
+    <figure class="qr-box" id="qr-box" hidden>
+      <canvas id="qr" width="280" height="280" aria-label="Mã QR"></canvas>
+    </figure>
+
+    <button type="button" id="dl" class="btn" hidden>Tải PNG</button>
+  </main>
+  <script src="qr-min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+  background: #f4f4f5;
+}
+
+.wrap {
+  max-width: 28rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 650;
+}
+
+.hint {
+  margin: 0 0 1.25rem;
+  font-size: 0.875rem;
+  color: #52525b;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 0.875rem;
+  border: 1px solid #d4d4d8;
+  border-radius: 0.5rem;
+  background: #fff;
+  resize: vertical;
+  font: inherit;
+}
+
+textarea:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+  border-color: #2563eb;
+}
+
+.input-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.err {
+  margin: 0.75rem 0 0;
+  font-size: 0.875rem;
+  color: #b91c1c;
+}
+
+.qr-box {
+  margin: 1.5rem 0 0;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 0.75rem;
+  border: 1px solid #e4e4e7;
+  text-align: center;
+}
+
+#qr {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #2563eb;
+  color: #fff;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.input-actions .btn {
+  margin-top: 0;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #1a1a1a;
+  border: 1px solid #d4d4d8;
+}
+
+.btn-secondary:hover {
+  background: #f4f4f5;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+.btn-secondary:hover {
+  background: #f4f4f5;
+}
+
+.btn:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #fafafa;
+    background: #18181b;
+  }
+
+  .hint {
+    color: #a1a1aa;
+  }
+
+  textarea {
+    background: #27272a;
+    border-color: #3f3f46;
+    color: inherit;
+  }
+
+  .qr-box {
+    background: #27272a;
+    border-color: #3f3f46;
+  }
+
+  .btn-secondary {
+    background: #27272a;
+    color: inherit;
+    border-color: #3f3f46;
+  }
+
+  .btn-secondary:hover {
+    background: #3f3f46;
+  }
+}
